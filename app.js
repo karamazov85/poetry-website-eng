@@ -1,4 +1,5 @@
 const express = require('express'); 
+const PORT = process.env.PORT || 5500
 const controller = require('./src/js/controller');
 const app = express();
 
@@ -11,7 +12,7 @@ app.use(express.static('src'));
 // fire up controller
 controller(app);
 
-app.listen(5500);
+app.listen(PORT);
 console.log('listening to port 5500')
 
 
