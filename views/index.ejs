@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/index-styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="/fontawesome/css/all.css" rel="stylesheet" />
+    <!--load all styles -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:ital@0;1&display=swap"
+        rel="stylesheet" />
+    <title>Pebble Beach Poetry</title>
+</head>
+
+<body>
+    <header> 
+
+        <%- include('./partials/nav.ejs') %>
+        
+        <div class="header__bottom container">
+            <div class="featured__container flow-content">
+                <i class="fas fa-quote-left featured__quote-sign"></i>
+                <h3 class="featured-text">
+                    It's amazing how much pain can simply be exhaled...
+                </h3>
+                <a class="featured-link" href="#">Read poem...</a>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="poem__collection-grid container">
+            <% if (posts) { %>
+                <% posts.forEach(post => { %>
+                    <a class="link-poem" href="/poem/<%= post.id %>">
+                        <article class="poem__preview">
+                            <i class="fas fa-quote-left quote-icon"></i>
+                            <div class="poem__preview__container-text flow-content">
+                                <h2><%= post.title %></h2>
+                                <%= post.teaser %>
+                            </div>
+                        </article>
+                    </a>
+                <% }) %>
+            <% } %>
+        </div>
+    </section>
+
+    <%- include('./partials/footer.ejs')  %>
+
+    <script src="../src/js/index.js"></script>
+</body>
+</html>
