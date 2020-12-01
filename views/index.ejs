@@ -34,7 +34,7 @@
         <div class="poem__collection-grid container">
             <% if (posts) { %>
                 <% posts.forEach(post => { %>
-                    <a class="link-poem" href="/poem/<%= post.id %>">
+                    <a class="link-poem" href="/poem/<%= post.slug %>">
                         <article class="poem__preview">
                             <i class="fas fa-quote-left quote-icon"></i>
                             <div class="poem__preview__container-text flow-content">

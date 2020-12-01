@@ -1,4 +1,3 @@
-// node.js code
 const path = require("path");
 const fs = require("fs");
 
@@ -49,8 +48,11 @@ const getPosts = () => {
         const content = parseContent({ lines, metadataIndices });
         const date = new Date(metadata.date);
         const timestamp = date.getTime() / 1000;
+        const slug = metadata.title.toLowerCase().replace(/ /g, "-");
+
         post = {
           id: timestamp,
+          slug: slug,
           title: metadata.title ? metadata.title : "No title given",
           author: metadata.author ? metadata.author : "No author given",
           teaser: metadata.teaser ? metadata.teaser : "No teaser here",
