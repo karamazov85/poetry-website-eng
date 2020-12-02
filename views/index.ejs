@@ -29,6 +29,10 @@
             </div>
         </div>
     </header>
+    <div class="header__sort container">
+        <a class="sort__btn-recent" href="/sort/most-recent">Most recent</a>
+        <a class="sort__btn-a-z" href="/sort/a-z">A-Z</a>
+    </div>
 
     <section>
         <div class="poem__collection-grid container">
@@ -37,7 +41,7 @@
                     <a class="link-poem" href="/poem/<%= post.slug %>">
                         <article class="poem__preview">
                             <i class="fas fa-quote-left quote-icon"></i>
-                            <div class="poem__preview__container-text flow-content">
+                            <div class="poem__preview__container-text">
                                 <h2><%= post.title %></h2>
                                 <%= post.teaser %>
                             </div>

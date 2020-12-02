@@ -1,5 +1,5 @@
 ---
-title: freedom
+title: Freedom
 teaser: In the sphere of all-out freedom, freedom becomes unthinkable.
 author: Adam
 date: july 12 2020

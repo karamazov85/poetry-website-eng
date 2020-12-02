@@ -1,5 +1,5 @@
 ---
-title: over/under
+title: Over/under
 teaser: Without overthinking, let’s just understand the overeducated underachievers who overpopulate the land.
 author: Adam
 date: july 15 2020

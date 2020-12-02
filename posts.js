@@ -69,7 +69,7 @@ const getPosts = () => {
         if (postlist.length === files.length) {
           const sortedList = postlist.sort((a, b) => b.id - a.id);
           let data = JSON.stringify(sortedList);
-          fs.writeFileSync("src/posts.json", data); // give a path and a filename you want to call it, then write the data JSON
+          fs.writeFileSync("./src/posts.json", data); // give a path and a filename you want to call it, then write the data JSON
         }
       });
     });
@@ -77,4 +77,5 @@ const getPosts = () => {
   return;
 };
 
-getPosts();
+getPosts(); 
+
