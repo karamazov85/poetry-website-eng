@@ -20,13 +20,15 @@
         <%- include('./partials/nav.ejs') %>
         
         <div class="header__bottom container">
-            <div class="featured__container flow-content">
+            <% const featured = posts.find(post => post.featured === 'true') %>
+                <div class="featured__container flow-content">
                 <i class="fas fa-quote-left featured__quote-sign"></i>
                 <h3 class="featured-text">
-                    It's amazing how much pain can simply be exhaled...
-                </h3>
-                <a class="featured-link" href="#">Read poem...</a>
-            </div>
+                    <%= featured.teaser %>
+              </h3>
+                <a class="featured-link" href="/poem/<%= featured.slug %>">Read poem...</a>
+            </div>  
+            
         </div>
     </header>
     <div class="header__sort container">
@@ -54,6 +56,5 @@
 
     <%- include('./partials/footer.ejs')  %>
 
-    <script src="../src/js/index.js"></script>
 </body>
 </html>
